@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------
-Problematica:
+Problematica 3:
 El Usuario quiere saber cual es el área de un círculo tenieno el radio
 ------------------------------------------------------------------------------------
 
@@ -25,9 +25,3 @@ Inicio
     Mostrar mensaje: "El área del círculo con radio ", radio ," es: ", area
 Fin
 ------------------------------------------------------------------------------------
-
-para Git Hub solo aplicar de esta manera
-
-git add .
-git commit -m "descripción de los cambios"
-git push
