@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------
+Problematica:
+Caso a resolver empresa SuperTech
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Algoritmo:
+1-Definir el valor actual de Euro y del Dolar respecto al Peso Mexicano
+2-Solicitar al usuario el tipo de conversion (Euro a Mex o Dolar a Mex)
+3-Solicitar al usuario el monto a convertir
+4-Realizar la conversion utilizando el tipo de cambio correspondiente
+5-Mostar el resultado de la conversion al usuario
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Pseudocódigo:
+
+Inicio
+
+    # Paso 1: Definir el valor actual de Euro y del Dolar respecto al Peso Mexicano
+    Definir tipo_cambio_eur_a_mxn=23.70
+    Definir tipo_cambio_usd_a_mxn=20.75
+
+    # Paso2: Solicitar al usuario el tipo de conversion (Euro a Mex o Dolar a Mex)
+    Mostrar mensaje: "Ingrese la moneda origen para la conversion (EUR/USD): "
+
+    # Paso3: Solicitar al usuario el monto a convertir
+    Mostrar mensaje: "Ingrese el monto a convertir: "
+
+    # Paso4: Realizar la conversion utilizando el tipo de cambio correspondiente
+    # Paso5: Mostar el resultado de la conversion al usuario
+    Si tipo_conversion == "EUR":
+        Calcular resultado = monto_a_convertir * tipo_cambio_eur_a_mxn
+        MOstrar mensaje: "El resultado de la conersion de EUR a MXN es: ", resultado
+    Sino tipo_conversion == "USD":
+        Calcular resultado = monto_a_convertir * ipo_cambio_usd_a_mxn
+        MOstrar mensaje: "El resultado de la conersion de USD a MXN es: ", resultado
+    Sino
+        Mostrar mensaje: "No esta disponible este tipo de conversion actualmente"
+    
+Fin
+------------------------------------------------------------------------------------
