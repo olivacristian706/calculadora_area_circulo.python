@@ -31,10 +31,10 @@ Inicio
     # Paso5: Mostar el resultado de la conversion al usuario
     Si tipo_conversion == "EUR":
         Calcular resultado = monto_a_convertir * tipo_cambio_eur_a_mxn
-        MOstrar mensaje: "El resultado de la conersion de EUR a MXN es: ", resultado
+        Mostrar mensaje: "El resultado de la conersion de EUR a MXN es: ", resultado
     Sino tipo_conversion == "USD":
         Calcular resultado = monto_a_convertir * ipo_cambio_usd_a_mxn
-        MOstrar mensaje: "El resultado de la conersion de USD a MXN es: ", resultado
+        Mostrar mensaje: "El resultado de la conersion de USD a MXN es: ", resultado
     Sino
         Mostrar mensaje: "No esta disponible este tipo de conversion actualmente"
     
