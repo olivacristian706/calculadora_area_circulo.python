@@ -251,6 +251,16 @@ numeros_al_cuadrado = list(map(cuadrado, lista_numeros))
 print(f"Números al cuadrado: {numeros_al_cuadrado}") # Muestra la lista de números al cuadrado, 
 # [1, 4, 9, 16, 25]
 
+
+def saludo(nombre):
+    return f"Hola, {nombre}!"
+
+nombres = ["Ana", "Luis", "Marta"]
+
+mapeo = list(map(saludo, nombres))
+print(f"Saludos: {mapeo}") # Muestra los saludos personalizados para cada nombre
+
+# --------------------------------------------------------------
 #Filter, toma una función y un iterable, y devuelve un nuevo iterable con los elementos que cumplen una condición
 
 def par(x):
@@ -259,6 +269,7 @@ def par(x):
 pares = list(filter(par, lista_numeros))
 print(f"Números pares: {pares}") # Muestra la lista de números pares, [2, 4]
 
+# --------------------------------------------------------------
 #Reduce, toma una función y un iterable, y devuelve un único valor acumulado
 
 def sumar(x, y):
@@ -268,3 +279,41 @@ suma_total = reduce(sumar, lista_numeros)
 print(f"Suma total: {suma_total}") # Muestra la suma de todos los números en la lista, 15
 
 
+# Uso de Lambda con funciones de orden superior
+
+# Usando map con una función lambda para elevar al cuadrado
+numeros_al_cuadrado_lambda = list(map(lambda x: x ** 2, lista_numeros))
+print(f"Números al cuadrado (lambda): {numeros_al_cuadrado_lambda}") # [1, 4, 9, 16, 25]
+
+# Usando filter con una función lambda para filtrar números pares
+pares_lambda = list(filter(lambda x: x % 2 == 0, lista_numeros))
+print(f"Números pares (lambda): {pares_lambda}") # [2, 4]
+
+# Clousure: son funciones que recuerdan el entorno en el que fueron creadas
+# Permiten crear funciones con estado privado
+
+def crear_contador():
+    contador = 0
+    def incrementar():
+        nonlocal contador
+        contador += 1
+        return contador
+    return incrementar
+contador1 = crear_contador()
+print(contador1())  # Muestra 1
+
+# Decoradores o decorator: son funciones que modifican el comportamiento de otras funciones
+# Permiten añadir funcionalidad adicional a una función sin modificar su código original
+# wrappers, son funciones internas que envuelven a la función original
+
+def decorador_saludo(funcion):
+    def envoltura(nombre):
+        print("Antes de la función de saludo.")
+        funcion(nombre)
+        print("Después de la función de saludo.")
+    return envoltura
+@decorador_saludo
+def saludar(nombre):
+    print(f"¡Hola, {nombre}!")
+
+saludar("Pedro")  # Llamada a la función decorada   
